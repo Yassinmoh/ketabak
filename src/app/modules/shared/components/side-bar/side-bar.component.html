@@ -1,0 +1,14 @@
+<section class="sidebar">
+  <div class="sidebar__header">
+    <img src="../../../../../assets/images/logo.png" alt="logo">
+  </div>
+  <div class="sidebar__content">
+    <div class="planes">
+      <div class="itme" *ngFor="let item of menu; let i = index" (click)="selectMenuItem(i)" [ngClass]="{'active':activeItem == i}">
+        <svg><use [attr.href]="item.icon"></use></svg>
+        <span>{{ item.title }}</span>
+      </div>
+    </div>
+  </div>
+</section>
+

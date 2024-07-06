@@ -1,1 +1,18 @@
-<p>home-page works!</p>
+<div class="tab-menu">
+  <div class="tab-header">
+    <div [class.active]="activeTab === 1" (click)="selectTab(1)">
+      <svg><use href="#document"></use></svg>
+      <span>المواد الدراسية</span>
+    </div>
+    <div [class.active]="activeTab === 2" (click)="selectTab(2)">
+      <svg><use href="#document"></use></svg>
+      <span>كل التمارين</span>
+    </div>
+  </div>
+  <div class="tab-content" *ngIf="activeTab === 1">
+    <p>Content for Tab 1</p>
+  </div>
+  <div class="tab-content" *ngIf="activeTab === 2">
+    <p>Content for Tab 2</p>
+  </div>
+</div>

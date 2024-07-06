@@ -1,0 +1,53 @@
+@import '../../../../../assets/style/general/common.scss';
+
+:host {
+  width: 16%;
+  height: 100%;
+}
+
+.sidebar {
+  background: var(--main-bg-color);
+  min-height: 114vh;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+
+  .sidebar__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sidebar__content {
+    margin-top: 1rem;
+
+    .planes{
+      .itme{
+        margin: 1rem 0;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+        // transition: all 0.1s ease-in-out;
+        span {
+          @include textStyle(16px, 18.97px, var(--gray-5), 500);
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+
+        &:is(.active){
+          background: #fff;
+          padding: 0.3rem 0.5rem;
+          height: 42px;
+          border-radius: 5px;
+          span{
+            @include textStyle(16px, 18.97px,#FF3BA6 , 600);
+          }
+        }
+      }
+    }
+  }
+}

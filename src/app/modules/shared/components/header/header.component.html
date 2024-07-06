@@ -1,0 +1,44 @@
+<header class="header">
+  <div class="header__right-part">
+
+    @if(isMobile) {
+    <svg>
+      <use href="#burger-menu"></use>
+    </svg>
+    } @else{
+    <svg>
+      <use href="#arrow-right"></use>
+    </svg>
+    }
+
+
+    <p>المواد</p>
+    <img src="../../../.././../assets/images/logo.png" alt="logo">
+  </div>
+  <div class="header__left-part">
+    <div class="header__notification">
+      <svg>
+        <use href="#calender"></use>
+      </svg>
+      <svg>
+        <use href="#info"></use>
+      </svg>
+      <svg>
+        <use href="#bell"></use>
+      </svg>
+    </div>
+    <div class="header__user-info">
+      <div class="avatar-box">
+        <img src="../../../.././../assets/images/avatar.png" alt="user-avatar">
+      </div>
+      <div>
+        <p class="name">احمد سليمان</p>
+        <p class="title">معلم</p>
+      </div>
+      <!-- <svg>
+        <use href="#more-dots"></use>
+      </svg> -->
+    </div>
+  </div>
+</header>
+

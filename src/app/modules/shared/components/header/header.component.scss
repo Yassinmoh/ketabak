@@ -1,0 +1,140 @@
+@import '../../../../../assets/style/general/common.scss';
+
+header {
+  height: 84px;
+  background: var(--main-bg-color);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__right-part {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    p {
+      display: none;
+    }
+
+    img {
+      height: auto;
+      width: 80%;
+      display: block;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .header__left-part {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .header__notification {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      p {
+        @include textStyle(20px, 18.26px, #292D32, 600);
+        display: none;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+
+      svg:nth-child(1),
+      svg:nth-child(2) {
+        display: none;
+      }
+
+      span {
+        display: block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background: red;
+        border-radius: 50%;
+        left: -3px;
+        top: 0px;
+        text-align: center;
+        // @include textStyle(14px, 18.26px, $greta,#fff, 400);
+      }
+    }
+
+    .header__user-info {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+
+      .avatar-box {
+        width: 45px;
+        height: 45px;
+        background: #EA9DF6;
+        border-radius: 50%
+      }
+
+      >div {
+        .name {
+          @include textStyle(16px, 18.26px, #0D062D, 600);
+          cursor: pointer;
+        }
+
+        .title {
+          @include textStyle(14px, 18.26px, #092434, 500);
+        }
+      }
+    }
+  }
+}
+
+
+@include DesktopScreen {
+  :host {
+    header {
+      gap: 1rem;
+
+      .header__right-part {
+        p {
+          display: block;
+          @include textStyle(30px, 34.23px, var(--primary-font-color), 700);
+        }
+
+        img {
+          display: none;
+        }
+      }
+
+      .header__left-part {
+        .header__notification {
+          svg {
+            margin: 0 0.4rem;
+          }
+
+          svg:nth-child(1),
+          svg:nth-child(2) {
+          display: block;}
+        }
+
+        .header__user-info {
+          padding: 0.7rem 1.5rem;
+          border-radius: 8px;
+          gap: 0.7rem;
+
+          svg {
+            width: 7px;
+            height: 19.5px;
+            margin-right: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
