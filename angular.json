@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ip-tracker": {
+    "ketabak": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -25,10 +25,7 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -37,7 +34,7 @@
               "includePaths": [
                 "src/assets/style/helpers",
                 "src/assets/style/abstract",
-                "src/assets/style/general"
+                "src/assets/style/common"
               ]
             },
             "scripts": []
@@ -102,7 +99,7 @@
               "includePaths": [
                 "src/assets/style/helpers",
                 "src/assets/style/abstract",
-                "src/assets/style/general"
+                "src/assets/style/common"
               ]
             },
             "scripts": []
