@@ -9,10 +9,33 @@
       <span>كل التمارين</span>
     </div>
   </div>
-  <div class="tab-content" *ngIf="activeTab === 1">
-    <p>Content for Tab 1</p>
-  </div>
-  <div class="tab-content" *ngIf="activeTab === 2">
-    <p>Content for Tab 2</p>
-  </div>
+  @if(activeTab === 1){
+    <div class="tab-content">
+      <p>Content for Tab 1</p>
+    </div>
+  }@else{
+    <div class="tab-content">
+      <div class="tab-content_container">
+        <div class="right__side">
+          <div class="menu">
+            @for(item of labels; track item.id; let i = $index){
+              <div class="menu_item" (click)="selectTab(2,i)"
+                [ngClass]="{'active':activeMenuItem == i}" draggable="true"
+                (dragstart)="dragStart($event)" [attr.data-type]="item.type">
+                <span>{{item.title}}</span>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="left__side">
+          <div class="drop-area" id="drop-area" (dragover)="dragOver($event)" (dragleave)="dragLeave($event)" (drop)="drop($event)">
+            قم بسحب و ادراج نوع السؤال هنا ..
+          </div>
+          <div class="drop__container">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  }
 </div>
