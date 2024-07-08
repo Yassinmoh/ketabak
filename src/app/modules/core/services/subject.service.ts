@@ -9,7 +9,7 @@ import { catchError, Observable, tap, throwError } from 'rxjs';
 export class SubjectService {
 
   _http = inject(HttpClient);
-  baseApi:string = 'http://localhost:58161/assets/data'
+  baseApi:string = 'http://localhost:4200/assets/data'
 
   getSubjects():Observable<Subject[]>{
     return this._http.get<Subject[]>(`${this.baseApi}/subject.json`).pipe(

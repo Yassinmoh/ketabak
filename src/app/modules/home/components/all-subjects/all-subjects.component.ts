@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { SubjectCardComponent } from '../subject-card/subject-card.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-all-subjects',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,SubjectCardComponent],
   templateUrl: './all-subjects.component.html',
   styleUrl: './all-subjects.component.scss'
 })

@@ -1,0 +1,59 @@
+@import '../../../../../assets/style/general/common.scss';
+
+.subject__card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+
+  .img_box {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  p:nth-of-type(1) {
+    @include textStyle(25px, 22px, #092433, bold);
+    padding: 0.4rem 0;
+  }
+
+  p:nth-of-type(2) {
+    @include textStyle(14px, 20px, #A8A8A8, 400);
+    padding: 0.4rem 0;
+  }
+
+  .status {
+    margin: 0.5rem 0;
+    span:nth-of-type(1) {
+      @include textStyle(14px, 22px, #092433, 600);
+    }
+
+    span:nth-of-type(2) {
+      @include textStyle(13px, 22px, #00C614, 600);
+      padding: 0.3rem 0.5rem;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+      background: #e0f8e3;
+    }
+  }
+
+  .add_btn {
+    display: flex;
+    align-items: flex-end;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+    span {
+      @include textStyle(14px, 22px, #FF3BA6, 600);
+    }
+
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../../../../assets/style/general/common.scss';
+
+.all__subjects{
+  background: #f9f9f9;
+
+  .titel{
+    @include textStyle(28px, 20px, #292D32, bold);
+    background: #f9f9f9;
+  }
+  .subjects__container{
+    min-height: 100vh;
+    background: #f9f9f9;
+    height: 100%;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+}
