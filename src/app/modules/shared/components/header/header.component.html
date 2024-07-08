@@ -2,12 +2,8 @@
   <div class="header__right-part">
 
     @if(isMobile) {
-    <svg>
-      <use href="#burger-menu"></use>
-    </svg>
-    } @else{
-    <svg>
-      <use href="#arrow-right"></use>
+    <svg (click)="openSidebar()">
+      <use href="#sidebar"></use>
     </svg>
     }
 
@@ -35,9 +31,6 @@
         <p class="name">احمد سليمان</p>
         <p class="title">معلم</p>
       </div>
-      <!-- <svg>
-        <use href="#more-dots"></use>
-      </svg> -->
     </div>
   </div>
 </header>

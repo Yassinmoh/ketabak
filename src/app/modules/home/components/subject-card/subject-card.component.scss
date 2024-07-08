@@ -8,18 +8,21 @@
 
   .img_box {
     width: 100%;
+    height: 23vh;
     border-radius: 12px;
     overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
+      // Temporarily until we get the correct sizes for the images
+      object-fit: cover;
     }
   }
 
   p:nth-of-type(1) {
     @include textStyle(25px, 22px, #092433, bold);
-    padding: 0.4rem 0;
+    padding: 1rem 0;
   }
 
   p:nth-of-type(2) {
@@ -29,13 +32,14 @@
 
   .status {
     margin: 0.5rem 0;
+
     span:nth-of-type(1) {
       @include textStyle(14px, 22px, #092433, 600);
     }
 
     span:nth-of-type(2) {
       @include textStyle(13px, 22px, #00C614, 600);
-      padding: 0.3rem 0.5rem;
+      padding: 0.1rem 0.5rem 0.3rem 0.5rem;
       border-radius: 8px;
       margin-right: 0.5rem;
       background: #e0f8e3;
@@ -47,6 +51,8 @@
     align-items: flex-end;
     margin: 0.5rem 0;
     gap: 0.5rem;
+    cursor: pointer;
+
     span {
       @include textStyle(14px, 22px, #FF3BA6, 600);
     }

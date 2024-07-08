@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
 export class SideBarComponent {
   activeItem: number = 0;
   menu = [
-    { title: 'الرئيسية' ,icon:'#plane'},
-    { title: 'المواد الدراسية' ,icon:'#plane'},
+    { title: 'الرئيسية' ,icon:'#chart'},
+    { title: 'المواد الدراسية' ,icon:'#chart'},
   ];
 
   selectMenuItem(index: number) {

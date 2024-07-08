@@ -1,12 +1,12 @@
 <section class="subject__card">
 <div class="img_box">
-  <img src="../../../../../assets/images/test-img.png" alt="test-img">
+  <img [src]="subject.image" [alt]="subject.name">
 </div>
-<p>اسم المادة</p>
-<p>يتفاعل الطلاب مع المعلم بالكتابة والصوت وحل الأسئلة والاختبارات  يتفاعل الطلاب مع </p>
+<p>{{subject.name}}</p>
+<p>{{subject.description}}</p>
 <div class="status">
   <span>الحالة:</span>
-  <span>مكتمل</span>
+  <span [ngStyle]="{'color':colors.text,'backgroundColor':colors.background}">{{subject.status}}</span>
 </div>
 <div class="add_btn">
   <span>اضافة تمرين</span>

@@ -126,6 +126,10 @@
               padding: 0.5rem 1rem;
               margin: 0.2rem 0;
               width: 91%;
+
+              &::placeholder{
+                @include textStyle(13px, 20px, #092434, 600);
+              }
             }
           }
           div:nth-child(2){

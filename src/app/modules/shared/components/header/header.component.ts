@@ -4,7 +4,7 @@ import { AppState } from '../../../../store/app.reducer';
 import { Observable } from 'rxjs';
 import { getHeaderTitle } from '../../../../store/app.selectors';
 import { CommonModule } from '@angular/common';
-
+import * as AppActions from '../../../../store/app.actions'
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -18,5 +18,9 @@ export class HeaderComponent implements OnInit{
   title$!:Observable<string>
   ngOnInit(): void {
     this.title$ = this.store.select(getHeaderTitle)
+  }
+
+  openSidebar(){
+    this.store.dispatch(AppActions.toggleSidebar())
   }
 }

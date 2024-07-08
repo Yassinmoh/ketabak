@@ -1,6 +1,8 @@
 <section class="all__subjects">
   <p class="titel">المواد</p>
-<div class="subjects__container">
-  <app-subject-card></app-subject-card>
+<div class="subjects__container" *ngIf="subjects$ | async as subjects">
+  @for(subject of subjects; track subject){
+    <app-subject-card [subject]="subject"></app-subject-card>
+  }
 </div>
 </section>

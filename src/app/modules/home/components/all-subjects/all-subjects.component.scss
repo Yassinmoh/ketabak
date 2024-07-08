@@ -15,3 +15,21 @@
     margin: 1.5rem 0;
   }
 }
+
+
+@include DesktopScreen {
+  :host {
+    .all__subjects{
+      .subjects__container{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        ::ng-deep app-subject-card{
+          width: 45%;
+        }
+      }
+    }
+  }
+}

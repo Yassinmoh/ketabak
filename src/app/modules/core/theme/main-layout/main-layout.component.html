@@ -1,9 +1,8 @@
 <div class="container">
-  <!-- <app-mobile-sidebar *ngIf="popupService.openFilter | async"></app-mobile-sidebar> -->
-    <app-side-bar class="sidebar"></app-side-bar>
-    <div class="content-wrapper">
-      <app-header></app-header>
-      <router-outlet></router-outlet>
-      <!-- <app-footer></app-footer> -->
+  <app-side-bar class="sidebar"></app-side-bar>
+  <app-mobile-sidebar *ngIf="showMobileSidebar$ | async"></app-mobile-sidebar>
+  <div class="content-wrapper">
+    <app-header [isMobile]="isMobile"></app-header>
+    <router-outlet></router-outlet>
   </div>
 </div>

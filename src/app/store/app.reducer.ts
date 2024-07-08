@@ -2,11 +2,13 @@ import { createReducer, on } from "@ngrx/store";
 import * as AppActions from './app.actions'
 
 export interface AppState {
-  headerTitle:string
+  headerTitle:string;
+  toggleSidebar:boolean;
 }
 
 const initState ={
-  headerTitle:'المواد'
+  headerTitle:'المواد',
+  toggleSidebar:false
 }
 
 export const appReducer = createReducer(initState,
@@ -14,6 +16,12 @@ export const appReducer = createReducer(initState,
     return{
       ...state,
       headerTitle:action.title
+    }
+  }),
+  on(AppActions.toggleSidebar,(state:AppState)=>{
+    return{
+      ...state,
+      toggleSidebar:!state.toggleSidebar
     }
   })
 )

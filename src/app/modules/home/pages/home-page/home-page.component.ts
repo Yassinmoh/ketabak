@@ -13,11 +13,11 @@ import { AllSubjectsComponent } from '../../components/all-subjects/all-subjects
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
-export class HomePageComponent implements OnInit{
+export class HomePageComponent{
   activeTab: number = 1;
 
   store= inject(Store<AppState>);
-  subjectService= inject(SubjectService);
+
 
   selectTab(tabIndex: number,menuItem:number =0): void {
     this.activeTab = tabIndex;
@@ -26,7 +26,4 @@ export class HomePageComponent implements OnInit{
     : this.store.dispatch(AppActions.setHeaderTitle({title:'كل التمارين'}))
   }
 
-  ngOnInit(): void {
-      this.subjectService.getSubjects().subscribe()
-  }
 }
