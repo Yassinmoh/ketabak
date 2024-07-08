@@ -12,12 +12,12 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     CommonModule,
     HeaderComponent,
     FooterComponent,
-    SideBarComponent
+    SideBarComponent,
   ],
   exports:[
     HeaderComponent,
     FooterComponent,
-    SideBarComponent
+    SideBarComponent,
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,203 @@
+@import '../../../../../assets/style/general/common.scss';
+
+.tab-content_container {
+  width: 100%;
+
+  .right__side {
+    background: var(--main-bg-color);
+    border-radius: 12px;
+
+    .menu {
+      padding: 1rem;
+
+      .menu_item {
+        cursor: grab;
+        padding: 0.5rem 0.7rem;
+        @include textStyle(14px, 20px, #000, 500);
+
+        &:is(.active) {
+          background: #fff;
+          border-radius: 2px;
+          @include textStyle(14px, 20px, #FF3BA6, bold);
+
+        }
+      }
+    }
+  }
+
+  .left__side {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+
+    .drop-area {
+      width: 100%;
+      height: 86px;
+      padding: 1rem;
+      border: 1px #ffd4ec dashed;
+      margin: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      @include textStyle(13.5px, 20px, #586a75, 500);
+    }
+
+    .drop__container {
+      padding: 1rem;
+      width: 100%;
+
+
+      .question {
+        width: 100%;
+        background: #f4f4f4;
+        border-radius: 12px;
+        padding: 1rem;
+        margin: 1rem 0;
+
+        .title {
+          @include textStyle(16.5px, 20px, #092434, bold);
+        }
+
+        textarea {
+          width: 100%;
+          height: 60px;
+          border: 0;
+          outline: none;
+          padding: 1rem;
+          margin: 1rem 0;
+          background: #fff;
+
+          &::placeholder {
+            @include textStyle(13.5px, 20px, #092434, 400);
+          }
+        }
+
+        .difficulty {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          .add_btn {
+            background: #ffe8f5;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 0.4rem;
+
+            svg {
+              width: 12px;
+              height: 12px;
+            }
+
+            span {
+              @include textStyle(13px, 20px, #FF3BA6, bold);
+            }
+
+          }
+
+          div:nth-child(2) {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            >div{
+              display: flex;
+              align-items: flex-end;
+              gap: 0.3rem;
+
+              input{
+                accent-color: #FF3BA6;
+              }
+            }
+          }
+        }
+
+        .que_container{
+          display: flex;
+          align-items: center;
+          margin: 0.5rem 0;
+          div:nth-child(1){
+            width: 54%;
+            input{
+              border: 0;
+              border-radius: 5px;
+              outline: none;
+              padding: 0.5rem 1rem;
+              margin: 0.2rem 0;
+              width: 91%;
+            }
+          }
+          div:nth-child(2){
+            label{
+              @include textStyle(15px, 20px, #092433, 400);
+              margin: 1rem 0;
+              display: flex;
+              align-items: flex-end;
+
+              input{
+                accent-color: #FF3BA6;
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+
+
+          .save-button{
+            background: #FF3BA6;
+            border: 0;
+            outline: none;
+            @include textStyle(16px, 20px, #FFF, bold);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+          }
+          .delete-button{
+            background: #feeded;
+            padding: 0.6rem;
+            border: 0;
+            outline: none;
+            border-radius: 6px;
+            @include textStyle(16px, 20px, #F70505, bold);
+
+          }
+
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px){
+  .tab-content_container {
+    display: flex;
+    gap: 1rem;
+
+    .right__side {
+      width: 17%;
+      height: 35vh;
+    }
+
+    .left__side {
+      width: 80%;
+      height: 100vh;
+      background: #fff;
+
+      .drop-area {
+        width: 90%;
+        height: 86px;
+        padding: 1rem;
+        border: 1px #ffd4ec dashed;
+        margin: 0.5rem 0.2rem;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        @include textStyle(13.5px, 20px, #586a75, 500);
+      }
+
+      .drop__container {
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

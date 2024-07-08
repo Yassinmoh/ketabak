@@ -1,0 +1,21 @@
+<div class="tab-content_container">
+  <div class="right__side">
+    <div class="menu">
+      @for(item of labels; track item.id; let i = $index){
+      <div class="menu_item" (click)="selectTab(i)" [ngClass]="{'active':activeMenuItem == i}" draggable="true"
+        (dragstart)="dragStart($event)" (touchstart)="touchStart($event)" [attr.data-type]="item.type">
+        <span>{{item.title}}</span>
+      </div>
+      }
+    </div>
+  </div>
+  <div class="left__side">
+    <div class="drop-area" #dropArea id="drop-area" (dragover)="dragOver($event)" (dragleave)="dragLeave($event)"
+      (drop)="drop($event)" (touchmove)="touchMove($event)" (touchend)="touchEnd($event)">
+      قم بسحب و ادراج نوع السؤال هنا ..
+    </div>
+    <div class="drop__container">
+
+    </div>
+  </div>
+</div>

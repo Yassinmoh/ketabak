@@ -28,7 +28,7 @@
         align-items: center;
         gap: 0.5rem;
         cursor: pointer;
-        // transition: all 0.1s ease-in-out;
+        transition: all 0.1s ease-in;
         span {
           @include textStyle(16px, 18.97px, var(--gray-5), 500);
         }
