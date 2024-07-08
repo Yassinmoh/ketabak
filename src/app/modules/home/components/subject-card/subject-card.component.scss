@@ -15,8 +15,7 @@
     img {
       width: 100%;
       height: 100%;
-      // Temporarily until we get the correct sizes for the images
-      object-fit: cover;
+      object-fit: cover; // Temporarily until we get the correct sizes for the images
     }
   }
 
@@ -54,7 +53,7 @@
     cursor: pointer;
 
     span {
-      @include textStyle(14px, 22px, #FF3BA6, 600);
+      @include textStyle(14px, 22px, var(--pinc-c), 600);
     }
 
     svg {

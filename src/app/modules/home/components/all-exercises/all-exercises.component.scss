@@ -18,7 +18,7 @@
         &:is(.active) {
           background: #fff;
           border-radius: 2px;
-          @include textStyle(14px, 20px, #FF3BA6, bold);
+          @include textStyle(14px, 20px, var(--pinc-c), bold);
 
         }
       }
@@ -91,7 +91,7 @@
             }
 
             span {
-              @include textStyle(13px, 20px, #FF3BA6, bold);
+              @include textStyle(13px, 20px, var(--pinc-c), bold);
             }
 
           }
@@ -107,7 +107,7 @@
               gap: 0.3rem;
 
               input{
-                accent-color: #FF3BA6;
+                accent-color: var(--pinc-c);
               }
             }
           }
@@ -140,7 +140,7 @@
               align-items: flex-end;
 
               input{
-                accent-color: #FF3BA6;
+                accent-color: var(--pinc-c);
                 margin-left: 0.5rem;
               }
             }
@@ -149,7 +149,7 @@
 
 
           .save-button{
-            background: #FF3BA6;
+            background: var(--pinc-c);
             border: 0;
             outline: none;
             @include textStyle(16px, 20px, #FFF, bold);

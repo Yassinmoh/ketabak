@@ -14,6 +14,7 @@ import * as AppActions from '../../../../store/app.actions'
   animations:[fadeInRight]
 })
 export class MobileSidebarComponent {
+
   store= inject(Store<AppState>)
   activeItem: number = 0;
   menu = [

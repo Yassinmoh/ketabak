@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './side-bar.component.scss'
 })
 export class SideBarComponent {
+
   activeItem: number = 0;
   menu = [
     { title: 'الرئيسية' ,icon:'#chart'},

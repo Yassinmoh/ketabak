@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './subject-card.component.scss'
 })
 export class SubjectCardComponent implements OnChanges {
+
   @Input() subject!: Subject
   colors={text:'',background:''}
 
@@ -18,6 +19,7 @@ export class SubjectCardComponent implements OnChanges {
       this.getStatusColor(this.subject.status);
     }
   }
+
   getStatusColor(status: string) {
     switch(status) {
       case 'مكتمل':

@@ -13,9 +13,11 @@ import * as AppActions from '../../../../store/app.actions'
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
+
   @Input() isMobile :any
   store= inject(Store<AppState>);
   title$!:Observable<string>
+
   ngOnInit(): void {
     this.title$ = this.store.select(getHeaderTitle)
   }

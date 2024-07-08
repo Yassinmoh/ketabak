@@ -16,6 +16,7 @@ export class AllSubjectsComponent implements OnInit{
 
   subjectService= inject(SubjectService);
   subjects$!:Observable<Subject[]>
+
   ngOnInit(): void {
     this.subjects$ = this.subjectService.getSubjects()
   }

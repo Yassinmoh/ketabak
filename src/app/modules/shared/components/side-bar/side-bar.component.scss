@@ -7,7 +7,7 @@
 
 .sidebar {
   background: var(--main-bg-color);
-  min-height: 114vh;
+  min-height: 100vh;
   height: 100%;
   width: 100%;
   padding: 1rem;
@@ -44,10 +44,26 @@
           height: 42px;
           border-radius: 5px;
           span{
-            @include textStyle(16px, 18.97px,#FF3BA6 , 600);
+            @include textStyle(16px, 18.97px,var(--pinc-c) , 600);
           }
         }
       }
+    }
+  }
+
+  .logout{
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-right: 1rem;
+    svg{
+      width: 18px;
+      height: 18px;
+    }
+    span{
+      @include textStyle(16px, 20px,var(--pinc-c) , bold);
     }
   }
 }
